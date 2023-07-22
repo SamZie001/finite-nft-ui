@@ -3,6 +3,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 .main img {
   max-width: 500px;
@@ -42,10 +43,10 @@
   display: flex;
   justify-content: space-between;
   gap: 20px;
-  width: 325px;
+  width: 298px;
   position: absolute;
-  bottom: 60px;
-  right: 115px;
+  bottom: 50px;
+  right: 33px;
   rotate: -4deg;
   animation: moveUpDown 2s ease-in-out infinite alternate;
 }
