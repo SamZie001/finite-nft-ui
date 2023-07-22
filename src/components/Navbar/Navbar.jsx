@@ -9,7 +9,7 @@ const Navbar = () => {
       <div className={styles.right}>
         <div className={styles.searchbar}>
           <img src="/icons/icon-search.svg" alt="search" />
-          <input type="text" placeholder={`Search for "crypro punks"`} />
+          <input type="text" placeholder={`Search for "crypto punks"`} />
         </div>
         <ul className={styles["nav-links"]}>
           <li>Explore</li>
