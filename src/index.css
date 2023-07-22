@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap");
+
+:root {
+  --primary-clr: #0f1d40;
+  --secondary-clr: #5127c6;
+  --bg-clr: #f9f6fa;
+  --gradient-pink: #a768e6;
+  --text: #2f2d30;
+}
+
+body {
+  background: var(--bg-clr);
+  overflow-y: hidden;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+}
+button,
+input {
+  border: none;
+}
+h1 {
+  font-size: 4.8em;
+}
+h3 {
+  font-size: 1.5em;
+}
+ul,
+li,
+ol {
+  list-style: none;
+}
+
+.App {
+  margin: 0 auto;
+  width: 1100px;
+}
+.button {
+  min-width: 120px;
+  cursor: pointer;
+  background: linear-gradient(
+    80deg,
+    var(--gradient-pink) 1%,
+    var(--secondary-clr)
+  );
+  padding: 1rem;
+  display: inline-flex;
+  justify-content: center;
+  border-radius: 13px;
+  color: var(--bg-clr);
+  font-weight: 700;
+  font-size: 0.9em;
+}
