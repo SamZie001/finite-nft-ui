@@ -1,7 +1,30 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./Main.module.css";
 
 const Main = () => {
+  const totalSeconds = 12 * 60 * 59; // 12 hours in seconds
+  const [remainingSeconds, setRemainingSeconds] = useState(totalSeconds);
+
+  useEffect(() => {
+    let interval;
+
+    const updateCountdown = () => {
+      if (remainingSeconds > 0) {
+        setRemainingSeconds((prevSeconds) => prevSeconds - 1);
+      }
+    };
+
+    interval = setInterval(updateCountdown, 1000);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, [remainingSeconds]);
+
+  const hour = Math.floor(remainingSeconds / 3600);
+  const minutes = Math.floor((remainingSeconds % 3600) / 60);
+  const seconds = remainingSeconds % 60;
+
   return (
     <main className={styles.main}>
       <div className={styles.section}>
@@ -21,7 +44,9 @@ const Main = () => {
       <img className={styles.nft} src="/images/NFT.png" alt="nft" />
       <div className={styles.bids}>
         <div className={styles["bid-dets"]}>
-          <p>Time</p>
+          <p>
+            {hour}:{minutes}:{seconds}
+          </p>
           <p>Remaining time</p>
         </div>
         <div className={styles["bid-dets"]}>
